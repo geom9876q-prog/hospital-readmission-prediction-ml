@@ -100,9 +100,9 @@ if st.button("Predict Readmission Risk"):
     st.subheader("Result")
     st.write(f"📊 **Readmission Probability:** {prob:.2%}")
 
-    if prob >= 0.35:
+    if prob >= 0.25:
         st.error("🔴 High risk of 30-day readmission")
-    elif prob >= 0.2:
+    elif prob >= 0.15:
         st.warning("🟠 Moderate risk of 30-day readmission")
     else:
         st.success("🟢 Low risk of 30-day readmission")
